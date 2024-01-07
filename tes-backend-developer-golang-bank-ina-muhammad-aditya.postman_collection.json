@@ -40,14 +40,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}:3636/users/50",
+							"raw": "{{local}}:3636/users/8",
 							"host": [
 								"{{local}}"
 							],
 							"port": "3636",
 							"path": [
 								"users",
-								"50"
+								"8"
 							],
 							"query": [
 								{
@@ -70,12 +70,12 @@
 							"formdata": [
 								{
 									"key": "name",
-									"value": "Muhammad Aditya",
+									"value": "Ichsan Ashiddiqi",
 									"type": "text"
 								},
 								{
 									"key": "email",
-									"value": "m.aditya3232@gmail.com",
+									"value": "iashiddiqi@gmail.com",
 									"type": "text"
 								},
 								{
@@ -120,20 +120,20 @@
 								},
 								{
 									"key": "password",
-									"value": "P@ssw0rd123!!",
+									"value": "secret",
 									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "{{local}}:3636/users/300",
+							"raw": "{{local}}:3636/users/9",
 							"host": [
 								"{{local}}"
 							],
 							"port": "3636",
 							"path": [
 								"users",
-								"300"
+								"9"
 							]
 						}
 					},
@@ -145,14 +145,14 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{local}}:3636/users/4",
+							"raw": "{{local}}:3636/users/9",
 							"host": [
 								"{{local}}"
 							],
 							"port": "3636",
 							"path": [
 								"users",
-								"4"
+								"9"
 							]
 						}
 					},

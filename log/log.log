@@ -73,3 +73,14 @@
 {"level":"info","message":"Login Success/google_callback200127.0.0.1","timestamp":"14:41:18 07-01-2024"}
 {"level":"info","message":"Data found./tasks200127.0.0.1","timestamp":"14:41:36 07-01-2024"}
 {"level":"info","message":"Logout Success/logout200127.0.0.1","timestamp":"14:41:49 07-01-2024"}
+{"level":"info","message":"Logout Success/logout200127.0.0.1","timestamp":"14:51:59 07-01-2024"}
+{"level":"info","message":"Logout Success/logout200127.0.0.1","timestamp":"14:52:17 07-01-2024"}
+{"level":"info","message":"Data found./users200127.0.0.1","timestamp":"14:53:03 07-01-2024"}
+{"level":"error","message":"Data not found.[record not found]/users/50404127.0.0.1","timestamp":"14:56:17 07-01-2024"}
+{"level":"info","message":"Data found./users/8200127.0.0.1","timestamp":"14:56:26 07-01-2024"}
+{"level":"info","message":"Successfully created new data./users201127.0.0.1","timestamp":"15:04:16 07-01-2024"}
+{"level":"info","message":"Successfully updated data./users/9200127.0.0.1","timestamp":"15:05:16 07-01-2024"}
+{"level":"info","message":"Successfully deleted data./users/9200127.0.0.1","timestamp":"15:07:31 07-01-2024"}
+{"level":"info","message":"Login Success/google_callback200127.0.0.1","timestamp":"15:09:07 07-01-2024"}
+{"level":"info","message":"Data found./tasks200127.0.0.1","timestamp":"15:09:27 07-01-2024"}
+{"level":"info","message":"Successfully updated data./users/7200127.0.0.1","timestamp":"15:12:53 07-01-2024"}
