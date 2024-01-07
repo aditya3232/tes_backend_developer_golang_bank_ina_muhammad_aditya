@@ -66,4 +66,10 @@ const (
 
 	// FailedUnauthorized is the message returned when the user is fail in middleware
 	FailedUnauthorized = "Unauthorized."
+
+	// login success
+	LoginSuccess = "Login success."
+
+	// login failed
+	LoginFailed = "Login failed."
 )

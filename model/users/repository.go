@@ -8,6 +8,7 @@ type Repository interface {
 	Create(User) (User, error)
 	Update(User) (User, error)
 	Delete(id int) error
+	GetByEmail(email string) (bool, error)
 }
 
 type repository struct {
@@ -66,4 +67,15 @@ func (r *repository) Delete(id int) error {
 	}
 
 	return nil
+}
+
+func (r *repository) GetByEmail(email string) (bool, error) {
+	var user User
+
+	err := r.db.First(&user, "email = ?", email).Error
+	if err != nil {
+		return false, err
+	}
+
+	return true, nil
 }

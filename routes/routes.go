@@ -18,7 +18,7 @@ func Initialize(router *gin.Engine) {
 	// Initialize services
 	usersService := users.NewService(usersRepository)
 	taskService := tasks.NewService(taskRepository)
-	oauth2Service := oauth2.NewService()
+	oauth2Service := oauth2.NewService(usersRepository)
 
 	// Initialize handlers
 	usersHandler := handler.NewUsersHandler(usersService)
