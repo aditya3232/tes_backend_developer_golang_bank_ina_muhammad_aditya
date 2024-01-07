@@ -3,8 +3,10 @@ package log
 import (
 	"io"
 	"os"
+	"path/filepath"
 
 	logrus "github.com/sirupsen/logrus"
+	"github.com/spf13/viper"
 )
 
 var New = logrus.New()
@@ -18,15 +20,20 @@ type LogArgs struct {
 func init() {
 	log := New
 
-	os.Chdir("../atmVideoPack-services/log")
-	file, err := os.OpenFile("log.log", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
+	// Set the log file path
+	logFilePath := filepath.Join("..", "tes_backend_developer_golang_bank_ina_muhammad_aditya", "log", "log.log")
+
+	// Open the log file
+	file, err := os.OpenFile(logFilePath, os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
 	if err != nil {
 		log.Warnf("error opening file: %v", err)
 	}
 
+	// Set the log output to both stdout and the log file
 	mw := io.MultiWriter(os.Stdout, file)
 	log.SetOutput(mw)
 
+	// Set the log formatter
 	log.Formatter = &logrus.JSONFormatter{
 		TimestampFormat: "15:04:05 02-01-2006",
 		FieldMap: logrus.FieldMap{
@@ -36,6 +43,10 @@ func init() {
 		},
 		DisableHTMLEscape: false,
 	}
+
+	// Add the config path for viper
+	configPath := filepath.Join("..", "tes_backend_developer_golang_bank_ina_muhammad_aditya", "config")
+	viper.AddConfigPath(configPath)
 }
 
 /*
