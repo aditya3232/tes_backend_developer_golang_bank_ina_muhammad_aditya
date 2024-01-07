@@ -17,6 +17,7 @@ type envConfigs struct {
 	GOOGLE_CLIENT_ID     string `mapstructure:"GOOGLE_CLIENT_ID"`
 	GOOGLE_CLIENT_SECRET string `mapstructure:"GOOGLE_CLIENT_SECRET"`
 	GOOGLE_REDIRECT_URL  string `mapstructure:"GOOGLE_REDIRECT_URL"`
+	OAUTH_STATE_STRING   string `mapstructure:"OAUTH_STATE_STRING"`
 
 	DB_HOST    string `mapstructure:"DB_HOST"`
 	DB_PORT    string `mapstructure:"DB_PORT"`

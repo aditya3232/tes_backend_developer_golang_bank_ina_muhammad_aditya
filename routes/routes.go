@@ -3,6 +3,7 @@ package routes
 import (
 	"github.com/aditya3232/tes_backend_developer_golang_bank_ina_muhammad_aditya/connection"
 	"github.com/aditya3232/tes_backend_developer_golang_bank_ina_muhammad_aditya/handler"
+	"github.com/aditya3232/tes_backend_developer_golang_bank_ina_muhammad_aditya/middleware"
 	"github.com/aditya3232/tes_backend_developer_golang_bank_ina_muhammad_aditya/model/oauth2"
 	"github.com/aditya3232/tes_backend_developer_golang_bank_ina_muhammad_aditya/model/tasks"
 	"github.com/aditya3232/tes_backend_developer_golang_bank_ina_muhammad_aditya/model/users"
@@ -28,7 +29,7 @@ func Initialize(router *gin.Engine) {
 	api := router.Group("")
 
 	usersRoutes := api.Group("")
-	tasksRoutes := api.Group("")
+	tasksRoutes := api.Group("", middleware.Oauth2Middleware())
 	oauth2Routes := api.Group("")
 
 	configureUsersRoutes(usersRoutes, usersHandler)
