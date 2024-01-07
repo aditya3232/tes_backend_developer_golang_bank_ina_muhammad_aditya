@@ -54,3 +54,22 @@
 {"level":"error","message":"Users Not FoundUsers not found/google_callback404127.0.0.1","timestamp":"13:01:53 07-01-2024"}
 {"level":"error","message":"Data not found.[record not found]/users/50404127.0.0.1","timestamp":"13:03:43 07-01-2024"}
 {"level":"info","message":"Login Success/google_callback200127.0.0.1","timestamp":"13:18:56 07-01-2024"}
+{"level":"error","message":"Users Not FoundUsers not found/google_callback404127.0.0.1","timestamp":"13:31:07 07-01-2024"}
+{"level":"info","message":"Login Success/google_callback200127.0.0.1","timestamp":"13:31:17 07-01-2024"}
+{"level":"info","message":"Data found./tasks200127.0.0.1","timestamp":"13:31:39 07-01-2024"}
+{"level":"info","message":"Data found./tasks200127.0.0.1","timestamp":"14:27:13 07-01-2024"}
+{"level":"info","message":"Login Success/google_callback200127.0.0.1","timestamp":"14:31:41 07-01-2024"}
+{"level":"info","message":"Data found./tasks200127.0.0.1","timestamp":"14:32:00 07-01-2024"}
+{"level":"info","message":"Data found./tasks200127.0.0.1","timestamp":"14:32:03 07-01-2024"}
+{"level":"info","message":"Data found./tasks200127.0.0.1","timestamp":"14:32:28 07-01-2024"}
+{"level":"info","message":"Data found./tasks200127.0.0.1","timestamp":"14:32:33 07-01-2024"}
+{"level":"error","message":"Code-Token Exchange FailedCode-Token Exchange Failed/google_callback500127.0.0.1","timestamp":"14:32:43 07-01-2024"}
+{"level":"error","message":"Code-Token Exchange FailedCode-Token Exchange Failed/google_callback500127.0.0.1","timestamp":"14:32:45 07-01-2024"}
+{"level":"info","message":"Data found./tasks200127.0.0.1","timestamp":"14:32:51 07-01-2024"}
+{"level":"info","message":"Data found./tasks200127.0.0.1","timestamp":"14:32:59 07-01-2024"}
+{"level":"error","message":"Users Not FoundUsers not found/google_callback404127.0.0.1","timestamp":"14:38:08 07-01-2024"}
+{"level":"info","message":"Login Success/google_callback200127.0.0.1","timestamp":"14:38:30 07-01-2024"}
+{"level":"info","message":"Data found./tasks200127.0.0.1","timestamp":"14:38:47 07-01-2024"}
+{"level":"info","message":"Login Success/google_callback200127.0.0.1","timestamp":"14:41:18 07-01-2024"}
+{"level":"info","message":"Data found./tasks200127.0.0.1","timestamp":"14:41:36 07-01-2024"}
+{"level":"info","message":"Logout Success/logout200127.0.0.1","timestamp":"14:41:49 07-01-2024"}

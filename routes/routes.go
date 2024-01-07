@@ -41,6 +41,7 @@ func Initialize(router *gin.Engine) {
 func configureOAuth2Routes(group *gin.RouterGroup, handler *handler.OAuth2Handler) {
 	group.GET("/google_login", handler.GoogleLogin)
 	group.GET("/google_callback", handler.GoogleCallback)
+	group.GET("/logout", handler.Logout)
 }
 
 func configureUsersRoutes(group *gin.RouterGroup, handler *handler.UsersHandler) {

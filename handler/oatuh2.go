@@ -4,6 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"net/http"
+	"strings"
 	"time"
 
 	"github.com/aditya3232/tes_backend_developer_golang_bank_ina_muhammad_aditya/config"
@@ -134,4 +135,56 @@ func (h *OAuth2Handler) GoogleCallback(c *gin.Context) {
 		c.JSON(response.Meta.Code, response)
 	}
 
+}
+
+// logout
+func RevokeGoogleToken(accessToken string) error {
+	revokeURL := "https://accounts.google.com/o/oauth2/revoke?token=" + accessToken
+	resp, err := http.Post(revokeURL, "application/x-www-form-urlencoded", nil)
+	if err != nil {
+		return err
+	}
+	defer resp.Body.Close()
+
+	return nil
+}
+
+func (h *OAuth2Handler) Logout(c *gin.Context) {
+	token := strings.TrimPrefix(c.GetHeader("Authorization"), "Bearer ")
+
+	if token == " " {
+		endpoint := c.Request.URL.Path
+		message := "Logout Failed"
+		errorCode := http.StatusBadRequest
+		ipAddress := c.ClientIP()
+		errors := "Token not valid"
+		log_function.Error(message, errors, endpoint, errorCode, ipAddress)
+
+		response := helper.APIResponse(message, http.StatusBadRequest, nil)
+		c.JSON(response.Meta.Code, response)
+		return
+	}
+
+	// Revoke access token from Google (optional)
+	if err := RevokeGoogleToken(token); err != nil {
+		endpoint := c.Request.URL.Path
+		message := "Logout Failed"
+		errorCode := http.StatusInternalServerError
+		ipAddress := c.ClientIP()
+		errors := "Failed to revoke Google token"
+		log_function.Error(message, errors, endpoint, errorCode, ipAddress)
+
+		response := helper.APIResponse(message, http.StatusInternalServerError, nil)
+		c.JSON(response.Meta.Code, response)
+		return
+	}
+
+	endpoint := c.Request.URL.Path
+	message := "Logout Success"
+	infoCode := http.StatusOK
+	ipAddress := c.ClientIP()
+	log_function.Info(message, "", endpoint, infoCode, ipAddress)
+
+	response := helper.APIResponse(message, http.StatusOK, nil)
+	c.JSON(response.Meta.Code, response)
 }

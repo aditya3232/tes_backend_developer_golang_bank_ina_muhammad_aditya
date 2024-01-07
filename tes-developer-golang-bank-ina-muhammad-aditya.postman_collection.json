@@ -1,0 +1,379 @@
+{
+	"info": {
+		"_postman_id": "ce59d253-4195-4102-b25f-ef626ede9c15",
+		"name": "tes-backend-developer-golang-bank-ina-muhammad-aditya",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15473973"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}:3636/users",
+							"host": [
+								"{{local}}"
+							],
+							"port": "3636",
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}:3636/users/50",
+							"host": [
+								"{{local}}"
+							],
+							"port": "3636",
+							"path": [
+								"users",
+								"50"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Muhammad Aditya",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "m.aditya3232@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "P@ssw0rd123!!",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}:3636/users",
+							"host": [
+								"{{local}}"
+							],
+							"port": "3636",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Ichsan Ashiddiqi",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "iashiddiqi3232@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "P@ssw0rd123!!",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}:3636/users/300",
+							"host": [
+								"{{local}}"
+							],
+							"port": "3636",
+							"path": [
+								"users",
+								"300"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{local}}:3636/users/4",
+							"host": [
+								"{{local}}"
+							],
+							"port": "3636",
+							"path": [
+								"users",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tasks",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer ya29.a0AfB_byB17G9O9EvRuoveb4WrVfPvZcPb2_aLqxZV2o16mq1Tb6Nj8C3hIAqSL1l9yb8juJO6XxgvbfaqcV5EeA7ZjSgBVdiRe-jxDAiJveeN7zyMtPUkSzeHPu3Iw2ORk2Kf5rMLduSaMcMFgyaXA5qtFccdH5alNMRBaCgYKATkSARISFQHGX2Mi58fn1_LBBg9EwGDE6q7oFQ0171",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local}}:3636/tasks",
+							"host": [
+								"{{local}}"
+							],
+							"port": "3636",
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}:3636/tasks/3",
+							"host": [
+								"{{local}}"
+							],
+							"port": "3636",
+							"path": [
+								"tasks",
+								"3"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "tes_3",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "tes_3",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "working",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}:3636/tasks",
+							"host": [
+								"{{local}}"
+							],
+							"port": "3636",
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "tes_2",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "tes_2",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "pending",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}:3636/tasks/3",
+							"host": [
+								"{{local}}"
+							],
+							"port": "3636",
+							"path": [
+								"tasks",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{local}}:3636/tasks/4",
+							"host": [
+								"{{local}}"
+							],
+							"port": "3636",
+							"path": [
+								"tasks",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "google_login",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}:3636/google_login",
+							"host": [
+								"{{local}}"
+							],
+							"port": "3636",
+							"path": [
+								"google_login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer ya29.a0AfB_byB17G9O9EvRuoveb4WrVfPvZcPb2_aLqxZV2o16mq1Tb6Nj8C3hIAqSL1l9yb8juJO6XxgvbfaqcV5EeA7ZjSgBVdiRe-jxDAiJveeN7zyMtPUkSzeHPu3Iw2ORk2Kf5rMLduSaMcMFgyaXA5qtFccdH5alNMRBaCgYKATkSARISFQHGX2Mi58fn1_LBBg9EwGDE6q7oFQ0171",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local}}:3636/logout",
+							"host": [
+								"{{local}}"
+							],
+							"port": "3636",
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "local",
+			"value": "127.0.0.1"
+		}
+	]
+}
