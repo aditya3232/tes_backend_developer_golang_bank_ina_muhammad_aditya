@@ -1,4 +1,3 @@
-
 # API Spec
 
 ## 1 Auth
@@ -316,4 +315,9 @@ Request :
     "data": null
 }
 ```
+
+# Migrations
+- Perintah Migrate
+    - migrate -database "mysql://root:root_password@tcp(127.0.0.1:3306)/bank_ina" -path db/migrations up
+    
 
