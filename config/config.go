@@ -14,6 +14,10 @@ type envConfigs struct {
 	APP_PORT string `mapstructure:"APP_PORT"`
 	APP_HOST string `mapstructure:"APP_HOST"`
 
+	GOOGLE_CLIENT_ID     string `mapstructure:"GOOGLE_CLIENT_ID"`
+	GOOGLE_CLIENT_SECRET string `mapstructure:"GOOGLE_CLIENT_SECRET"`
+	GOOGLE_REDIRECT_URL  string `mapstructure:"GOOGLE_REDIRECT_URL"`
+
 	DB_HOST    string `mapstructure:"DB_HOST"`
 	DB_PORT    string `mapstructure:"DB_PORT"`
 	DB_USER    string `mapstructure:"DB_USER"`
