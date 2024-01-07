@@ -4,7 +4,6 @@ import (
 	"context"
 	"io"
 	"net/http"
-	"strings"
 
 	oauth2_library "github.com/aditya3232/tes_backend_developer_golang_bank_ina_muhammad_aditya/library/oauth2"
 	oauth2_service "github.com/aditya3232/tes_backend_developer_golang_bank_ina_muhammad_aditya/model/oauth2"
@@ -51,12 +50,11 @@ func (h *OAuth2Handler) GoogleCallback(c *gin.Context) {
 	}
 	defer resp.Body.Close()
 
-	var userDataBuffer io.Writer
-	_, err = io.Copy(userDataBuffer, resp.Body)
+	userData, err := io.ReadAll(resp.Body)
 	if err != nil {
 		c.String(http.StatusInternalServerError, "JSON Parsing Failed")
 		return
 	}
 
-	c.String(http.StatusOK, userDataBuffer.(*strings.Builder).String())
+	c.String(http.StatusOK, string(userData))
 }
